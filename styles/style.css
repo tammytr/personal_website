@@ -77,8 +77,17 @@ h5{
 	padding: 0 1rem 0 1rem;
 }
 
+.name a{
+	color: var(--clr-pink);
+}
+
+.title{
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
 .active{
-	color: var(--clr-purple);
+	color: var(--clr-purple) !important;
 }
 
 #navbar{
@@ -111,11 +120,28 @@ h5{
 	display: inline-block;
 	text-decoration: none;
 	font-size: 16;
-	color: var(--clr-pink);
 }
 
 #navbar a:hover{
 	color: var(--clr-purple);
+}
+
+.navbar__link{
+	color: var(--clr-pink);
+}
+
+.navbar__link::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: var(--clr-purple);
+	transition: width .3s;
+}
+
+.navbar__link:hover::after{
+	width: 100%;
+	transition: width .3s;
 }
 
 .navbar__contents{
@@ -214,11 +240,12 @@ h5{
 
 .home__social img{
 	margin-right: 2.375rem;
+	opacity: 0.7;
 }
 
-.title{
-	text-align: center;
-	margin-bottom: 2rem;
+.home__social img:hover{
+	margin-right: 2.375rem;
+	opacity: 1;
 }
 
 section{
