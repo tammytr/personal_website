@@ -77,6 +77,10 @@ h5{
 	padding: 0 1rem 0 1rem;
 }
 
+.active{
+	color: var(--clr-purple);
+}
+
 #navbar{
 	width: 100%;
 	text-align: center;
@@ -128,29 +132,38 @@ h5{
 }
 
 @media screen and (max-width: 768px){
-	.navbar__menuicon{
-		width: 12%;
-		cursor: pointer;
-	}
-
 	#navbar ul{
-		height: 100%;
+		top: 30%;
 	}
 
 	#navbar li{
 		display: block;
 		padding-left: 0;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		z-index: 1;
+	}
+
+	.navbar__menuicon{
+		width: 80%;
+		height: auto;
+		cursor: pointer;
+	}
+
+	.navbar__toggle{
+		display: block;
 	}
 
 	.navbar__menu{
 		position: fixed;
 		top: var(--navbar-height);
 		right: -100%;
-		width: 80%
+		width: 60%;
 		height: 100%;
 		padding: 2rem;
-		background-color: var(--clr-white);
 		transition: .5s;
+		background-color: rgba(243, 243, 243, 0.2);
+		background-color: rgba(255, 255, 255, 0.3);
 		backdrop-filter: blur(10px);
 	}
 }
@@ -182,7 +195,6 @@ h5{
 	margin-top: 1.375rem;
 	margin-bottom: 3.4375rem;
 	padding-left: 1.625rem;
-
 }
 
 .home__vr:before{
@@ -209,7 +221,7 @@ h5{
 	margin-bottom: 2rem;
 }
 
-.container{
+section{
 	width: min(85%, 70rem);
 	padding-top: calc(var(--navbar-height) + 1rem);
 	margin: auto auto 10rem auto;
@@ -235,6 +247,10 @@ h5{
 .skills__card{
 	display: grid;
 	grid-template-columns: 1fr 2fr;
+}
+
+#skills{
+	margin-bottom: 8rem;
 }
 
 #skills ul{
@@ -284,8 +300,6 @@ h5{
 }
 
 .experience-align{
-	display: flex;
-	margin: 0;
 	align-self: flex-start;
 }
 
@@ -308,6 +322,102 @@ footer{
 }
 
 .footer__social img{
-	height: 3.5vh;
 	margin: 0 3.75rem;
+}
+
+@media screen and (max-width: 768px){
+	body{
+		color: var(--clr-black);
+		font-size: 14px;
+	}
+
+	h2{
+		font-size: 22px;
+	}
+
+	section{
+		margin-bottom: 2rem;
+	}
+
+	.mobile-split{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.home__info{
+		margin: 3rem 1.125rem 2rem;
+	}
+
+	.home__desc{
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.home__social img{
+		width: 10%;
+	}
+
+	.home__img{
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+	.home__img img{
+		width: 70%;
+	}
+
+	#about img{
+		margin: 0 0 2rem 0;
+		width: 75%;
+	}
+
+	#skills{
+		margin-bottom: 0;
+	}
+
+	.skills__card{
+		align-items: flex-start;
+	}
+
+	#skills h4{
+		margin-bottom: 2rem;
+	}
+
+	#skills li{
+		margin-left: 0;
+	}
+
+	#experience h5{
+		text-align: center;
+	}
+
+	.experience-align{
+		align-self: center;
+	}
+
+	.experience__job-desc{
+		margin: 1.3125rem 0;
+	}
+
+	.experience-card img{
+		margin-right: 0;
+	}
+
+	.experience-card{
+		padding-bottom: 1rem;
+		margin-bottom: 4rem;
+	}
+
+	.experience-card li{
+		margin-bottom: 0.5rem;
+	}
+
+	.experience-card ul: {
+		margin-bottom: -0.5rem;
+	}
+
+	.footer__social img{
+		margin: 0 1.75rem;
+	}
 }
